@@ -156,7 +156,36 @@
             <!-- Add your paragraph of text below -->
             <div class="col-lg-6">
                 <p>
-                    To address the issue at hand, it's essential to first project the data into the NAD 1983 HARN State Plane Michigan South coordinate system, ensuring uniformity in measurement units by utilizing feet. Subsequently, the River shapefile should be clipped using the Michigan boundaries shapefile, restricting the analysis to intersecting data only. Following this, a buffer of 0.3 miles from the river should be created to outline the immediate vicinity. Then, within the service Line data, filter and select all lead-related entries based on attribute selection. The resulting features can be exported to form a new shapefile. Proceed to generate a buffer of 0.2 miles specifically around the service lines composed of lead. Next, identify TRI facilities that surpass a pollution threshold of 10,000 tons and export them as a separate shapefile. Further, generate a buffer of 0.3 miles around these high-pollution facilities. Finally, intersect the three buffer shapefiles to pinpoint areas where the populace faces the highest risk of consuming contaminated water.
+                  Image 1: Download data State_2010Census_DP1 and find 
+DP0100002 which represents the population 
+number of Hispanic people in each state. Use the 
+sort ascending and descending to find the the five 
+top states that have the most and least population 
+of Hispanic people. Extract the data and name 
+each layer. To find the Hispanic population is 
+greater than the total population of the least 
+populous state in the U.S. use the attribute that 
+corressponds to the total United States population, 
+DP0010001. Use the sort ascending to find the 
+state with the smallest population. Then use the 
+select by attributes feature to find which states 
+have the same population as the least populated 
+state. 
+Right click on the state 2010 census and select 
+symbology. Select graduated colors for a 
+choropleth map. Add the total population of 
+Hispanics in the field and total population of the 
+United States in the Normalization. Image 2: Data Preparation:
+Make sure that both datasets (County Voting Data Table and PA Counties Polygon) are compatible and can be joined using a common attribute, such as the county 
+name. Join the voting data with the county polygon data based on the common attribute.
+Calculations
+To perform the specified tasks in ArcGIS, begin by opening the attribute table of the voting data layer and using the "Select By Attributes" tool to create a selection 
+query based on Trump's percentage of votes. For instance, a query such as "Trump_Percentage = 50" would select counties where Trump received exactly 50% of the 
+vote. After selecting the desired features, export the data if necessary. Then, in the Layer Properties window, navigate to the "Symbology" tab and choose "Graduated 
+Colors." Select the field representing Trump's percentage of votes and define the number of classes desired. In the natural breaks selection change the classes number 
+to 3. Then change natural breaks to manual breaks. Change the upper values to 65%, 75% and 100%. 
+Repeat the same process with the Biden vote points. Remember to turn of the original data that you export the votes from. The upper values for Biden are 55%, 65% 
+and 100%. Image 3:To address the issue at hand, it's essential to first project the data into the NAD 1983 HARN State Plane Michigan South coordinate system, ensuring uniformity in measurement units by utilizing feet. Subsequently, the River shapefile should be clipped using the Michigan boundaries shapefile, restricting the analysis to intersecting data only. Following this, a buffer of 0.3 miles from the river should be created to outline the immediate vicinity. Then, within the service Line data, filter and select all lead-related entries based on attribute selection. The resulting features can be exported to form a new shapefile. Proceed to generate a buffer of 0.2 miles specifically around the service lines composed of lead. Next, identify TRI facilities that surpass a pollution threshold of 10,000 tons and export them as a separate shapefile. Further, generate a buffer of 0.3 miles around these high-pollution facilities. Finally, intersect the three buffer shapefiles to pinpoint areas where the populace faces the highest risk of consuming contaminated water.
                 </p>
             </div>
                    </div>
